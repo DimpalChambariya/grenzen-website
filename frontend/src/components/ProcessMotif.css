@@ -1,0 +1,58 @@
+.motif {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+}
+
+.motif__line {
+  stroke: #274a68;
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 6 6;
+}
+
+.motif__line--main {
+  stroke: #3a6488;
+}
+
+.motif__tank {
+  opacity: 0;
+  animation: motifRise 0.6s ease forwards;
+}
+
+.motif__reactor {
+  transform-origin: 200px 210px;
+  animation: motifSettle 0.8s ease 0.5s backwards;
+}
+
+.motif__pulse {
+  opacity: 0.9;
+  transform-origin: 200px 210px;
+  animation: motifPulse 2.6s ease-in-out infinite;
+}
+
+.motif__flow {
+  filter: drop-shadow(0 0 3px rgba(201, 138, 44, 0.8));
+}
+
+@keyframes motifRise {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes motifSettle {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes motifPulse {
+  0%, 100% { r: 42; opacity: 0.9; }
+  50% { r: 48; opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motif__tank, .motif__reactor, .motif__pulse, .motif__flow {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

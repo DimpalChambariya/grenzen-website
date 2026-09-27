@@ -1,0 +1,14 @@
+{
+  "name": "grenzen-pharmachem-website",
+  "version": "1.0.0",
+  "description": "Full-stack website for Grenzen Pharmachem Industries Pvt. Ltd.",
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend",
+    "start": "node backend/server.js",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

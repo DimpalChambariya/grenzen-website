@@ -1,0 +1,300 @@
+/* ---------------------------------------------------------------------
+   Design tokens
+   Palette grounded in the plant/process world: petrol-navy tanks, molten
+   teal process liquid, ochre hazard-tape amber, warm steel-grey paper.
+--------------------------------------------------------------------- */
+:root {
+  --navy-950: #081b2d;
+  --navy-900: #0d243e;
+  --navy-800: #123a5a;
+  --navy-700: #1a4d73;
+  --teal-600: #0b7ca1;
+  --teal-500: #0f90be;
+  --teal-100: #dff7ff;
+  --amber-600: #c6932d;
+  --amber-500: #d9a642;
+  --amber-100: #f7e9c7;
+  --paper: #f3f1ed;
+  --paper-dim: #ece8e1;
+  --ink: #0f1e2b;
+  --muted: #536273;
+  --line: #d8d5cf;
+  --line-dark: #24405a;
+  --white: #ffffff;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --max-w: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--navy-950);
+  margin: 0 0 0.5em;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 62ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Layout helpers
+--------------------------------------------------------------------- */
+.shell {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section--tight {
+  padding: 56px 0;
+}
+
+.section--dark {
+  background: var(--navy-950);
+  color: #d9e2ea;
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--white);
+}
+
+.section--dim {
+  background: var(--paper-dim);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--teal-600);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.section--dark .kicker {
+  color: var(--teal-500);
+}
+
+.kicker::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--amber-500);
+  display: inline-block;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.section--dark .lede {
+  color: #a9bacb;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .section { padding: 56px 0; }
+  h1 { font-size: 2rem !important; }
+}
+
+/* ---------------------------------------------------------------------
+   Buttons
+--------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--teal-500);
+  color: var(--white);
+}
+.btn-primary:hover { background: var(--teal-600); }
+
+.btn-amber {
+  background: var(--amber-500);
+  color: var(--navy-950);
+}
+.btn-amber:hover { background: var(--amber-600); }
+
+.btn-outline {
+  border-color: var(--line-dark);
+  color: var(--white);
+}
+.btn-outline:hover { border-color: var(--teal-500); }
+
+.btn-outline--dark {
+  border-color: var(--line-dark);
+  color: var(--ink);
+  background: var(--white);
+}
+.btn-outline--dark:hover {
+  border-color: var(--teal-500);
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  color: var(--ink);
+}
+.btn-ghost:hover { border-color: var(--navy-800); }
+
+/* ---------------------------------------------------------------------
+   Cards / panels
+--------------------------------------------------------------------- */
+.panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.stat-figure {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--navy-950);
+  line-height: 1;
+}
+
+.section--dark .stat-figure { color: var(--white); }
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.section--dark .stat-label { color: #9fb0c1; }
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.spec-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-table td:first-child {
+  color: var(--muted);
+  width: 55%;
+}
+
+.spec-table td:last-child {
+  color: var(--ink);
+  font-weight: 500;
+  text-align: right;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--teal-100);
+  color: var(--teal-600);
+  margin: 0 6px 6px 0;
+}
+
+.tag-amber {
+  background: var(--amber-100);
+  color: var(--amber-600);
+}

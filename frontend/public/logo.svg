@@ -1,0 +1,62 @@
+<svg width="860" height="260" viewBox="0 0 860 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ringGrad" x1="74" y1="28" x2="240" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D7FF"/>
+      <stop offset="0.55" stop-color="#0097D9"/>
+      <stop offset="1" stop-color="#0B3E8E"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="110" y1="60" x2="198" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5F045"/>
+      <stop offset="0.6" stop-color="#6FB736"/>
+      <stop offset="1" stop-color="#2D8C2A"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="330" y1="40" x2="700" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18B5E6"/>
+      <stop offset="0.4" stop-color="#1F8DD1"/>
+      <stop offset="1" stop-color="#0A3E7E"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(16,10)">
+    <path d="M169 182C112 182 66 136 66 79C66 22 112 -24 169 -24C225 -24 271 22 271 79C271 136 225 182 169 182Z" fill="url(#ringGrad)" opacity="0.8"/>
+    <path d="M165 151C116 151 78 113 78 64C78 15 116 -23 165 -23C214 -23 252 15 252 64C252 113 214 151 165 151Z" fill="url(#ringGrad)" opacity="0.75"/>
+
+    <path d="M116 66C142 57 175 71 190 90C163 112 132 117 107 107C98 99 97 76 116 66Z" fill="url(#leafGrad)"/>
+    <path d="M178 69C214 52 241 67 251 95C223 108 197 107 174 95C167 87 168 76 178 69Z" fill="url(#leafGrad)" opacity="0.9"/>
+
+    <path d="M146 76C130 90 123 110 130 128C151 121 169 104 176 85C170 78 156 74 146 76Z" fill="url(#leafGrad)" opacity="0.85"/>
+
+    <g>
+      <circle cx="115" cy="56" r="16" fill="#D9E8F7"/>
+      <circle cx="167" cy="30" r="16" fill="#D9E8F7"/>
+      <circle cx="216" cy="56" r="16" fill="#D9E8F7"/>
+      <circle cx="164" cy="103" r="16" fill="#D9E8F7"/>
+      <circle cx="100" cy="111" r="16" fill="#D9E8F7"/>
+      <circle cx="228" cy="111" r="16" fill="#D9E8F7"/>
+      <circle cx="164" cy="56" r="15" fill="#D9E8F7"/>
+    </g>
+
+    <g>
+      <path d="M164 30L116 56L164 103L216 56L164 30Z" stroke="#E6F5FF" stroke-width="6" opacity="0.7"/>
+      <path d="M116 56L100 111" stroke="#E6F5FF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M216 56L228 111" stroke="#E6F5FF" stroke-width="6" stroke-linecap="round"/>
+      <path d="M164 30L164 103" stroke="#E6F5FF" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <g fill="#D9E8F7">
+      <circle cx="115" cy="56" r="9"/>
+      <circle cx="167" cy="30" r="9"/>
+      <circle cx="216" cy="56" r="9"/>
+      <circle cx="164" cy="103" r="9"/>
+      <circle cx="100" cy="111" r="9"/>
+      <circle cx="228" cy="111" r="9"/>
+      <circle cx="164" cy="56" r="9"/>
+    </g>
+  </g>
+
+  <g transform="translate(314,32)">
+    <text x="0" y="90" font-size="92" font-weight="800" letter-spacing="1.5" font-family="Segoe UI, Arial, sans-serif" fill="url(#textGrad)" style="font-stretch:expanded;">GRENZEN</text>
+    <text x="112" y="146" font-size="32" font-weight="700" letter-spacing="7" font-family="Segoe UI, Arial, sans-serif" fill="#2C8F62">PHARMA CHEM</text>
+    <line x1="112" y1="155" x2="520" y2="155" stroke="#3FA8C4" stroke-width="3" opacity="0.8"/>
+  </g>
+</svg>
