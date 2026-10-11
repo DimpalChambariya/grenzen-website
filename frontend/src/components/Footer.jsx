@@ -7,6 +7,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="shell footer__grid">
         <div className="footer__brand">
+          <Link to="/" style={{ display: "inline-block", marginBottom: "14px" }}>
+            <img src="/logo.png" alt="Grenzen Pharmachem Logo" style={{ height: "42px", width: "auto", display: "block" }} />
+          </Link>
           <h3>Grenzen Pharmachem</h3>
           <p>
             Industrial chemicals, epoxy systems, textile dyes and agro commodities, supplied from
